@@ -30,7 +30,7 @@ const AdminHome = () => {
                         <FaDollarSign></FaDollarSign>
                     </div>
                     <div className="stat-title">Revenue</div>
-                    <div className="stat-value">${states.revenue}</div>
+                    <div className="stat-value">${states?.revenue || 0}</div>
                     <div className="stat-desc">Jan 1st - Feb 1st</div>
                 </div>
 
@@ -39,7 +39,7 @@ const AdminHome = () => {
                         <FaUser></FaUser>
                     </div>
                     <div className="stat-title">Users</div>
-                    <div className="stat-value">{states.users}</div>
+                    <div className="stat-value">{states?.users}</div>
                     <div className="stat-desc">↗︎ 400 (22%)</div>
                 </div>
 
@@ -58,7 +58,7 @@ const AdminHome = () => {
                         </svg>
                     </div>
                     <div className="stat-title">Orders</div>
-                    <div className="stat-value">{states.orders}</div>
+                    <div className="stat-value">{states?.orders}</div>
                     <div className="stat-desc">↘︎ 90 (14%)</div>
                 </div>
                 <div className="stat">
@@ -76,7 +76,7 @@ const AdminHome = () => {
                         </svg>
                     </div>
                     <div className="stat-title">MenuItems</div>
-                    <div className="stat-value">{states.menuItems}</div>
+                    <div className="stat-value">{states?.menuItems}</div>
                     <div className="stat-desc">↘︎ 90 (14%)</div>
                 </div>
             </div>
