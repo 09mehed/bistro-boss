@@ -23,6 +23,12 @@ const Navbar = () => {
         <NavLink to='/secret' className='px-2 uppercase text-xl'>Secret</NavLink>
         <NavLink to='/menu' className='px-2 uppercase text-xl'>Our Menu</NavLink>
         <NavLink to='/order/salad' className='px-2 uppercase text-xl'>Our Shop</NavLink>
+        {
+            user && isAdmin && <NavLink to='/dashboard/adminHome' className='px-2 uppercase text-xl'>Our Menu</NavLink>
+        }
+        {
+            user && !isAdmin && <NavLink to='/dashboard/userHome' className='px-2 uppercase text-xl'>Our Menu</NavLink>
+        }
         <NavLink to='/dashboard/cart'>
             <button className="btn">
                 <FaShoppingCart className='text-xl'></FaShoppingCart>
